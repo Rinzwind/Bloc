@@ -105,8 +105,9 @@ BlLinearLayoutHorizontalOrientation >> layout: anElement in: aRectangle context:
 			self layout direction isLeftToRight 
 				ifTrue: [ position := (x + child constraints linear frontSpace) @ origin y ]
 				ifFalse: [ 
+					totalFrontSpace := totalFrontSpace + child constraints linear frontSpace.
 					position := (x + totalFrontSpace) @ origin y. 
-					totalFrontSpace := totalFrontSpace + child constraints linear frontSpace ].
+					].
 			position ]
 ]
 

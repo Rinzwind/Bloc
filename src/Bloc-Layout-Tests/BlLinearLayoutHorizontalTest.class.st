@@ -395,3 +395,32 @@ BlLinearLayoutHorizontalTest >> testParentWithLinearVerticalLayoutWithCellSpacin
 	self assert: child1 position y equals: 5.
 	self assert: child2 position y equals: 10
 ]
+
+{ #category : #tests }
+BlLinearLayoutHorizontalTest >> testWithLinearLayoutWithFrontSpace [
+
+	| e sub1 sub2 sub3 |
+	e := ToElement new
+		     fitContent;
+		     layout: BlLinearLayout horizontal.
+	"e layout direction: BlLayoutDirection rightToLeft."
+	e border: (BlBorder paint: Color black).
+
+	sub1 := ToElement new size: 60 asPoint.
+	sub1 background: (Color red alpha: 0.5).
+	sub1 constraints linear frontSpace: 100.
+
+	sub2 := ToElement new size: 60 asPoint.
+	sub2 background: (Color blue alpha: 0.5).
+	sub2 constraints linear frontSpace: 10.
+
+	sub3 := ToElement new size: 60 asPoint.
+	sub3 background: (Color green alpha: 0.5).
+	sub3 constraints linear frontSpace: 10.
+
+	e addChildren: {
+			sub1.
+			sub2.
+			sub3 }.
+	e openInSpace
+]
