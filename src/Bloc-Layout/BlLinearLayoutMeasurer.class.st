@@ -237,7 +237,7 @@ BlLinearLayoutMeasurer >> preMeasure [
 		| matchBreadthLocally childBreadth shouldUseExcessSpace |
 	
 		aNode hasSpaceBefore
-			ifTrue: [ totalLength := totalLength + self cellSpacing ].
+			ifTrue: [ totalLength := totalLength + self cellSpacing + aNode linearConstraints frontSpace ].
 		
 		totalWeight := totalWeight + aNode weight.
 		

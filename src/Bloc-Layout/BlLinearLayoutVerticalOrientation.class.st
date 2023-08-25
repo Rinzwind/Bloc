@@ -89,14 +89,14 @@ BlLinearLayoutVerticalOrientation >> layout: anElement in: aRectangle context: a
 				translation := (childConstraints horizontal alignment directed: self layout direction) translationOf: childMarginBounds in: allowedBounds.
 				childBounds := childBounds translateBy: translation ].
 			
-			childBounds := childBounds translateBy: (0.0 @ self layout cellSpacing).
+			childBounds := childBounds translateBy: (0.0 @ (self layout cellSpacing + child constraints linear frontSpace)).
 			
 			"telling each subnode what bounds to use for layouting process.
 			Because measuring process does not modify actual extent
 			we need to use a measured one"
 			child applyLayoutIn: childBounds context: aBlElementBoundsUpdateContext.
 			"translating origin vertically down for next subnode"
-			origin x @(origin y + child measuredHeight + self layout cellSpacing + (child outsets height max: 0.0)) ]
+			origin x @(origin y + child measuredHeight + self layout cellSpacing + child constraints linear frontSpace + (child outsets height max: 0.0)) ]
 ]
 
 { #category : #orientation }

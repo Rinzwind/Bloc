@@ -2,7 +2,8 @@ Class {
 	#name : #BlLinearLayoutConstraints,
 	#superclass : #BlLayoutConstraints,
 	#instVars : [
-		'weight'
+		'weight',
+		'frontSpace'
 	],
 	#category : #'Bloc-Layout-Linear'
 }
@@ -20,6 +21,18 @@ BlLinearLayoutConstraints >> defaultHorizontal [
 { #category : #initialization }
 BlLinearLayoutConstraints >> defaultVertical [
 	^ BlLinearLayoutConstraintsVertical new
+]
+
+{ #category : #accessing }
+BlLinearLayoutConstraints >> frontSpace [
+
+	^ frontSpace ifNil: [ frontSpace := 0.0 ]
+]
+
+{ #category : #accessing }
+BlLinearLayoutConstraints >> frontSpace: anObject [
+
+	frontSpace := anObject
 ]
 
 { #category : #initialization }
