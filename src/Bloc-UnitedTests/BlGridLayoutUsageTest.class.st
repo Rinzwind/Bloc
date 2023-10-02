@@ -5,7 +5,7 @@ I have been automatically converted and probably manually tweaked from BlGridLay
 Class {
 	#name : #BlGridLayoutUsageTest,
 	#superclass : #TestCase,
-	#category : #'Bloc-UnitedTests'
+	#category : #'Bloc-UnitedTests-Layout'
 }
 
 { #category : #fixture }
