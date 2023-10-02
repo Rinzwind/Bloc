@@ -223,7 +223,6 @@ BlMonotoneSelection >> invariant [
 { #category : #testing }
 BlMonotoneSelection >> isEmpty [
 	"Return true if selection is empty, false otherwise"
-	<return: #Boolean>
 
 	^ self to <= self from
 ]

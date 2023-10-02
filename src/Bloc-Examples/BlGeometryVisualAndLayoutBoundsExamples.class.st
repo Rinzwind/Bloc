@@ -304,7 +304,7 @@ BlGeometryVisualAndLayoutBoundsExamples >> rectangleWithSmallerGeometryOutside [
 { #category : #star }
 BlGeometryVisualAndLayoutBoundsExamples >> starPolygon [
 	<gtExample>
-	<label: 'Star polygon'>
+	
 	^ BlPolygonGeometry
 		vertices:
 			{(100 @ 50).
@@ -322,7 +322,8 @@ BlGeometryVisualAndLayoutBoundsExamples >> starPolygon [
 { #category : #star }
 BlGeometryVisualAndLayoutBoundsExamples >> starWithSmallerGeometry [
 	<gtExample>
-	<label: 'Star element in debug mode, displaying bounds'>
+	"Star element in debug mode, displaying bounds"
+	
 	| aStarElement |
 	aStarElement := BlDevElement new.
 	aStarElement geometry: self starPolygon.

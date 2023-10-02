@@ -54,7 +54,6 @@ BlLayoutGraphIterator >> hasNone [
 
 { #category : #'api - testing' }
 BlLayoutGraphIterator >> isEmpty [
-	<return: #Boolean>
 
 	^ self hasNone
 ]

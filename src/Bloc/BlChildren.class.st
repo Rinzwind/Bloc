@@ -248,7 +248,6 @@ BlChildren >> isCollection [
 
 { #category : #'children - testing' }
 BlChildren >> isEmpty [
-	<return: #Boolean>
 
 	^ self size isZero
 ]
