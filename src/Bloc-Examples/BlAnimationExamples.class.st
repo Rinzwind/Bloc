@@ -146,7 +146,6 @@ BlAnimationExamples >> _1_baseAnimation_start [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -174,7 +173,6 @@ BlAnimationExamples >> _1_massive_infiniteAnimation_start [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 	
 	self assert: aBaseAnimation loops equals: Float infinity.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -200,7 +198,6 @@ BlAnimationExamples >> _1_massive_oneLoopAnimation_start [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 	
 	self assert: aBaseAnimation loops equals: 1.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -227,7 +224,6 @@ BlAnimationExamples >> _1_massive_twoLoopAnimation_start [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -253,7 +249,6 @@ BlAnimationExamples >> _2_1_baseAnimation_step [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -281,7 +276,6 @@ BlAnimationExamples >> _2_1_massive_infiniteAnimation_step_oneDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 	
 	self assert: aBaseAnimation loops equals: Float infinity.
-	self assert: aBaseAnimation repeats equals: 1.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -308,7 +302,6 @@ BlAnimationExamples >> _2_1_massive_oneLoopAnimation_step_oneDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 	
 	self assert: aBaseAnimation loops equals: 1.
-	self assert: aBaseAnimation repeats equals: 1.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -335,7 +328,6 @@ BlAnimationExamples >> _2_1_massive_twoLoopAnimation_step_oneDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 1.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 
@@ -360,7 +352,6 @@ BlAnimationExamples >> _2_1_sequential_step [
 	self assert: aSequentialAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aSequentialAnimation loops equals: 2.
-	self assert: aSequentialAnimation repeats equals: 0.
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	
 	^ aSequentialAnimation
@@ -387,7 +378,7 @@ BlAnimationExamples >> _2_2_baseAnimation_step_halfDelay [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
+
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -415,7 +406,6 @@ BlAnimationExamples >> _2_2_massive_infiniteAnimation_step_twiceDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDuration.
 	
 	self assert: aBaseAnimation loops equals: Float infinity.
-	self assert: aBaseAnimation repeats equals: 2.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -442,7 +432,7 @@ BlAnimationExamples >> _2_2_massive_oneLoopAnimation_step_twiceDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 	
 	self assert: aBaseAnimation loops equals: 1.
-	self assert: aBaseAnimation repeats equals: 1.
+
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -469,7 +459,6 @@ BlAnimationExamples >> _2_2_massive_twoLoopAnimation_step_twiceDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDuration.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 2.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -497,7 +486,6 @@ BlAnimationExamples >> _2_3_baseAnimation_step_fullDelay [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -525,7 +513,7 @@ BlAnimationExamples >> _2_3_massive_infiniteAnimation_step_trippleDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + (self exampleDuration * 2).
 	
 	self assert: aBaseAnimation loops equals: Float infinity.
-	self assert: aBaseAnimation repeats equals: 3.
+
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -553,7 +541,7 @@ BlAnimationExamples >> _2_3_massive_infiniteAnimation_step_trippleDurationAndHal
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + (self exampleDuration * 3).
 	
 	self assert: aBaseAnimation loops equals: Float infinity.
-	self assert: aBaseAnimation repeats equals: 3.
+	
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -580,7 +568,7 @@ BlAnimationExamples >> _2_3_massive_oneLoopAnimation_step_trippleDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate.
 	
 	self assert: aBaseAnimation loops equals: 1.
-	self assert: aBaseAnimation repeats equals: 1.
+
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -607,7 +595,7 @@ BlAnimationExamples >> _2_3_massive_twoLoopAnimation_step_trippleDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDuration.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 2.
+	
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -635,7 +623,7 @@ BlAnimationExamples >> _3_1_baseAnimation_step_quarterOfDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
+
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 
@@ -664,7 +652,7 @@ BlAnimationExamples >> _3_1_sequential_step_halfDelay [
 	self assert: aSequentialAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aSequentialAnimation loops equals: 2.
-	self assert: aSequentialAnimation repeats equals: 0.
+	
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	
 	^ aSequentialAnimation
@@ -691,7 +679,7 @@ BlAnimationExamples >> _3_2_baseAnimation_step_halfOfDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
+	
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 
@@ -719,7 +707,7 @@ BlAnimationExamples >> _3_2_sequential_step_fullDelay [
 	self assert: aSequentialAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aSequentialAnimation loops equals: 2.
-	self assert: aSequentialAnimation repeats equals: 0.
+
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	
 	^ aSequentialAnimation
@@ -751,7 +739,7 @@ BlAnimationExamples >> _3_3_baseAnimation_step_fullDuration [
 	self assert: aBaseAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 1.
+	
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -779,7 +767,7 @@ BlAnimationExamples >> _4_1_baseAnimation_secondLoop_step_halfDelay [
 	self assert: aBaseAnimation delayedStartTime equals: (self exampleDate + self exampleDelay + self exampleDuration) + self exampleDelay.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 1.
+
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 
@@ -806,7 +794,7 @@ BlAnimationExamples >> _4_1_sequential_first_step_halfOfDuration [
 	self assert: aSequentialAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aSequentialAnimation loops equals: 2.
-	self assert: aSequentialAnimation repeats equals: 0.
+	
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	
 	aFirstAnimation := aSequentialAnimation animations first.
@@ -821,7 +809,7 @@ BlAnimationExamples >> _4_1_sequential_first_step_halfOfDuration [
 	self assert: aFirstAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aFirstAnimation loops equals: self firstSequentialLoops.
-	self assert: aFirstAnimation repeats equals: 0.
+
 	self assert: aFirstAnimation delay equals: 0 seconds.
 	
 	aSecondAnimation := aSequentialAnimation animations second.
@@ -832,7 +820,6 @@ BlAnimationExamples >> _4_1_sequential_first_step_halfOfDuration [
 	self assert: aSecondAnimation isRunning not.
 	
 	self assert: aSecondAnimation loops equals: self secondSequentialLoops.
-	self assert: aSecondAnimation repeats equals: 0.
 	self assert: aSecondAnimation delay equals: self secondSequentialDelay.
 	
 	^ aSequentialAnimation
@@ -857,7 +844,7 @@ BlAnimationExamples >> _4_2_baseAnimation_secondLoop_step_fullDelay [
 	self assert: aBaseAnimation delayedStartTime equals: (self exampleDate + self exampleDelay + self exampleDuration) + self exampleDelay.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 1.
+
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 
@@ -884,7 +871,7 @@ BlAnimationExamples >> _4_2_sequential_first_step_fullDuration [
 	self assert: aSequentialAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aSequentialAnimation loops equals: 2.
-	self assert: aSequentialAnimation repeats equals: 0.
+
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	
 	aFirstAnimation := aSequentialAnimation animations first.
@@ -899,7 +886,7 @@ BlAnimationExamples >> _4_2_sequential_first_step_fullDuration [
 	self assert: aFirstAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aFirstAnimation loops equals: self firstSequentialLoops.
-	self assert: aFirstAnimation repeats equals: 1.
+	
 	self assert: aFirstAnimation delay equals: 0 seconds.
 	
 	aSecondAnimation := aSequentialAnimation animations second.
@@ -910,7 +897,7 @@ BlAnimationExamples >> _4_2_sequential_first_step_fullDuration [
 	self assert: aSecondAnimation isRunning not.
 	
 	self assert: aSecondAnimation loops equals: self secondSequentialLoops.
-	self assert: aSecondAnimation repeats equals: 0.
+	
 	self assert: aSecondAnimation delay equals: self secondSequentialDelay.
 	
 	^ aSequentialAnimation
@@ -938,7 +925,7 @@ BlAnimationExamples >> _4_2_sequential_first_step_fullDurationAndHalf [
 	self assert: aSequentialAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aSequentialAnimation loops equals: 2.
-	self assert: aSequentialAnimation repeats equals: 0.
+	
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	
 	aFirstAnimation := aSequentialAnimation animations first.
@@ -953,7 +940,7 @@ BlAnimationExamples >> _4_2_sequential_first_step_fullDurationAndHalf [
 	self assert: aFirstAnimation delayedStartTime equals: self exampleDate + self exampleDelay + self firstSequentialDuration.
 	
 	self assert: aFirstAnimation loops equals: self firstSequentialLoops.
-	self assert: aFirstAnimation repeats equals: 1.
+	
 	self assert: aFirstAnimation delay equals: 0 seconds.
 	
 	aSecondAnimation := aSequentialAnimation animations second.
@@ -964,7 +951,7 @@ BlAnimationExamples >> _4_2_sequential_first_step_fullDurationAndHalf [
 	self assert: aSecondAnimation isRunning not.
 	
 	self assert: aSecondAnimation loops equals: self secondSequentialLoops.
-	self assert: aSecondAnimation repeats equals: 0.
+
 	self assert: aSecondAnimation delay equals: self secondSequentialDelay.
 	
 	^ aSequentialAnimation
@@ -989,7 +976,7 @@ BlAnimationExamples >> _4_3_baseAnimation_secondLoop_step_quarterOfDuration [
 	self assert: aBaseAnimation delayedStartTime equals: (self exampleDate + self exampleDelay + self exampleDuration) + self exampleDelay.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 1.
+	
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 
@@ -1015,7 +1002,7 @@ BlAnimationExamples >> _4_4_baseAnimation_secondLoop_step_halfOfDuration [
 	self assert: aBaseAnimation delayedStartTime equals: (self exampleDate + self exampleDelay + self exampleDuration) + self exampleDelay.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 1.
+
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 
@@ -1047,7 +1034,6 @@ BlAnimationExamples >> _4_5_baseAnimation_secondLoop_step_fullDuration [
 	self assert: aBaseAnimation delayedStartTime equals: (self exampleDate + self exampleDelay + self exampleDuration) + self exampleDelay.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 2.
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
 	
@@ -1076,7 +1062,7 @@ BlAnimationExamples >> _5_1_sequential_first_secondStep_halfDuration [
 	self assert: aSequentialAnimation delayedStartTime equals: self exampleDate + self exampleDelay.
 	
 	self assert: aSequentialAnimation loops equals: 2.
-	self assert: aSequentialAnimation repeats equals: 0.
+	
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	
 	aFirstAnimation := aSequentialAnimation animations first.
@@ -1091,7 +1077,7 @@ BlAnimationExamples >> _5_1_sequential_first_secondStep_halfDuration [
 	self assert: aFirstAnimation delayedStartTime equals: self exampleDate + self exampleDelay + self firstSequentialDuration.
 	
 	self assert: aFirstAnimation loops equals: self firstSequentialLoops.
-	self assert: aFirstAnimation repeats equals: 1.
+
 	self assert: aFirstAnimation delay equals: 0 seconds.
 	
 	aSecondAnimation := aSequentialAnimation animations second.
@@ -1102,7 +1088,7 @@ BlAnimationExamples >> _5_1_sequential_first_secondStep_halfDuration [
 	self assert: aSecondAnimation isRunning not.
 	
 	self assert: aSecondAnimation loops equals: self secondSequentialLoops.
-	self assert: aSecondAnimation repeats equals: 0.
+
 	self assert: aSecondAnimation delay equals: self secondSequentialDelay.
 	
 	^ aSequentialAnimation
@@ -1117,7 +1103,6 @@ BlAnimationExamples >> baseAnimation [
 	aBaseAnimation time: (BlTime simulated date: self exampleDate).
 
 	self assert: aBaseAnimation loops equals: 1.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation progress equals: 0.
 	self assert: aBaseAnimation delay equals: 0 seconds.
 	self assert: aBaseAnimation duration equals: 1 seconds.
@@ -1139,7 +1124,7 @@ BlAnimationExamples >> baseAnimationWithDelay [
 	aBaseAnimation delay: self exampleDelay.
 
 	self assert: aBaseAnimation loops equals: 1.
-	self assert: aBaseAnimation repeats equals: 0.
+	
 	self assert: aBaseAnimation progress equals: 0.
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: 1 seconds.
@@ -1162,7 +1147,6 @@ BlAnimationExamples >> baseAnimationWithDelayAndDurationAndTwoLoops [
 	aBaseAnimation duration: self exampleDuration.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
 	self assert: aBaseAnimation progress equals: 0.
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: self exampleDuration.
@@ -1184,7 +1168,7 @@ BlAnimationExamples >> baseAnimationWithDelayAndTwoLoops [
 	aBaseAnimation loops: 2.
 
 	self assert: aBaseAnimation loops equals: 2.
-	self assert: aBaseAnimation repeats equals: 0.
+	
 	self assert: aBaseAnimation progress equals: 0.
 	self assert: aBaseAnimation delay equals: self exampleDelay.
 	self assert: aBaseAnimation duration equals: 1 seconds.
@@ -1432,7 +1416,7 @@ BlAnimationExamples >> sequentialAnimationWithDelay [
 	self assert: aSequentialAnimation duration equals: 0 seconds.
 	self assert: aSequentialAnimation delay equals: self exampleDelay.
 	self assert: aSequentialAnimation loops equals: 1.
-	self assert: aSequentialAnimation repeats equals: 0.
+
 	self assert: aSequentialAnimation progress equals: 0.
 	self assert: aSequentialAnimation isStarted not.
 	self assert: aSequentialAnimation isRunning not.
