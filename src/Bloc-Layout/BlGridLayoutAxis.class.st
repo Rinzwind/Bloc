@@ -131,7 +131,7 @@ BlGridLayoutAxis >> arcs [
 
 { #category : #'computing links' }
 BlGridLayoutAxis >> backwardLinks [
-	<return: #BlGridPackedMap key: #Interval value: #BlGridMutableInteger>
+	"Return a BlGridPackedMap whose key is an interval and value is aBlGridMutableInteger"
 	
 	backwardLinks
 		ifNil: [ backwardLinks := self createLinks: false ].
@@ -300,7 +300,8 @@ BlGridLayoutAxis >> createArcs [
 
 { #category : #'computing group bounds' }
 BlGridLayoutAxis >> createGroupBounds [     
-	<return: #BlGridPackedMap key: #BlGridLayoutSpec value: #BlGridLayoutBounds>      
+	"Return a BlGridPackedMap whose key is an BlGridLayoutSpec and value is BlGridLayoutBounds"
+  
 	|assocs|
 	
 	assocs := OrderedCollection new.
@@ -314,7 +315,8 @@ BlGridLayoutAxis >> createGroupBounds [
 
 { #category : #'computing links' }
 BlGridLayoutAxis >> createLinks: isMin [
-	<return: #BlGridPackedMap key: #Interval value: #BlGridMutableInteger>
+	"Return a BlGridPackedMap whose key is an interval and value is aBlGridMutableInteger"
+	
 	| theLinks |
 
 	theLinks := OrderedCollection new.
@@ -360,7 +362,7 @@ BlGridLayoutAxis >> element: anElement [
 
 { #category : #'computing links' }
 BlGridLayoutAxis >> forwardLinks [
-	<return: #BlGridPackedMap key: #Interval value: #BlGridMutableInteger>
+	"Return a BlGridPackedMap whose key is an interval and value is aBlGridMutableInteger"
 	
 	forwardLinks
 		ifNil: [ forwardLinks := self createLinks: true ].
@@ -377,7 +379,8 @@ BlGridLayoutAxis >> groupArcsByFirstVertex: theArcs [
 	"Group arcs by their first vertex, returning an array of arrays of Arcs.
 	This is linear in the number of arcs.
 	theArcs is collection of BlGridLayoutArc."
-	<return: #Array of: #Array of: #BlGridLayoutArc>	
+	"return an Array of Array of BlGridLayoutArc"
+		
 	| n groups sizes |
 
 	n := self count + 1.
@@ -403,7 +406,7 @@ BlGridLayoutAxis >> groupArcsByFirstVertex: theArcs [
 
 { #category : #'computing group bounds' }
 BlGridLayoutAxis >> groupBounds [
-	<return: #BlGridPackedMap key: #BlGridLayoutSpec value: #BlGridLayoutBounds>  
+	"Return a BlGridPackedMap whose key is a BlGridLayoutSpec and value is aBlGridLayoutBounds"
 	
 	groupBounds
 		ifNil: [ groupBounds := self createGroupBounds ].
